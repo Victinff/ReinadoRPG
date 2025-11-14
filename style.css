@@ -1,0 +1,388 @@
+/* --- Configurações Globais (Reset) --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif; /* Fonte moderna para leitura */
+    background-color: #1a1a1a; /* Fundo escuro */
+    color: #e0e0e0; /* Texto principal claro */
+    line-height: 1.6;
+    /* Imagem de fundo sutil de pedra */
+    background-image: url('https://www.transparenttextures.com/patterns/dark-stone-wall.png');
+    background-attachment: fixed;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Cinzel', serif; /* Fonte medieval para títulos */
+    color: #ffd700; /* Ouro */
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+a {
+    color: #ffd700;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #fff;
+}
+
+code {
+    background-color: #333;
+    color: #f4f4f4;
+    padding: 3px 6px;
+    border-radius: 5px;
+    font-family: monospace;
+}
+
+/* --- Cabeçalho (Header) e Navegação --- */
+header {
+    background-color: rgba(15, 15, 15, 0.85); /* Preto semi-transparente */
+    border-bottom: 3px solid #ffd700;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(5px);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav li {
+    margin-left: 25px;
+}
+
+header nav a {
+    font-family: 'Cinzel', serif;
+    font-size: 1.1em;
+    font-weight: 700;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+header nav a.active,
+header nav a:hover {
+    background-color: #ffd700;
+    color: #1a1a1a;
+    text-shadow: none;
+}
+
+/* --- Seção Herói (Página Inicial) --- */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://img.playbook.com/1C02-K5tL_i7TqZ1D5o-iGv1yv8-i-HqX0-TqM_1yv0/eyJzYyI6IiIsImV4IjoiMjAyNC0wMS0yOVQxNzozOTo0MCswMDAwIiwidiI6IjEifQ.9l6-U6y-f1l-v5i-d3b-X6a-J8p-P4h-m2k-y7g-X3y'); /* Imagem de fundo genérica medieval/minecraft */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h2 {
+    font-size: 3.5em;
+    color: #fff;
+}
+
+.hero p {
+    font-size: 1.3em;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #ffd700;
+    color: #1a1a1a;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    font-weight: 700;
+    border-radius: 5px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+}
+
+/* --- Seção de Conexão (Página Inicial) --- */
+#conexao {
+    background-color: #2b2b2b;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.connection-boxes {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    margin-top: 30px;
+    flex-wrap: wrap; /* Para telas menores */
+}
+
+.connection-box {
+    background-color: #3c3c3c;
+    border: 2px solid #555;
+    padding: 30px;
+    border-radius: 10px;
+    width: 45%;
+    min-width: 300px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.connection-box h3 {
+    font-size: 1.8em;
+    border-bottom: 2px solid #ffd700;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+.connection-box.java { border-color: #8b4513; } /* Marrom (Java) */
+.connection-box.bedrock { border-color: #228b22; } /* Verde (Bedrock) */
+
+/* --- Seção de Recursos (Página Inicial) --- */
+.features-section {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+    text-align: left;
+}
+
+.feature {
+    background-color: #2b2b2b;
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 5px solid #ffd700;
+}
+
+/* --- Página de Comandos --- */
+.page-title {
+    text-align: center;
+    padding: 30px 0;
+    border-bottom: 2px solid #555;
+}
+
+.command-category {
+    background-color: #2b2b2b;
+    border: 1px solid #444;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.command-category summary {
+    font-family: 'Cinzel', serif;
+    font-size: 1.4em;
+    font-weight: 700;
+    color: #ffd700;
+    padding: 20px;
+    cursor: pointer;
+    display: block;
+    position: relative;
+}
+
+.command-category summary::after { /* Símbolo + */
+    content: '+';
+    position: absolute;
+    right: 20px;
+    font-size: 1.5em;
+    color: #e0e0e0;
+}
+
+.command-category[open] summary::after { /* Símbolo - */
+    content: '−';
+}
+
+.command-category ul {
+    list-style: none;
+    padding: 0 20px 20px 40px;
+}
+
+.command-category li {
+    padding: 8px 0;
+    border-bottom: 1px dashed #444;
+}
+.command-category li:last-child {
+    border-bottom: none;
+}
+.command-category li strong {
+    color: #ffd700;
+}
+
+/* --- Página de Suporte e Regras --- */
+.support-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.rules-box, .support-form-box {
+    background-color: #2b2b2b;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #444;
+}
+
+.rules-box h4 {
+    color: #f0f0f0;
+    border-bottom: 1px solid #ffd700;
+    padding-bottom: 5px;
+    margin-top: 15px;
+}
+
+/* Formulário de Suporte */
+#support-form label {
+    display: block;
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #ffd700;
+}
+
+#support-form input[type="text"],
+#support-form textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: #333;
+    border: 1px solid #555;
+    border-radius: 5px;
+    color: #e0e0e0;
+    font-family: 'Lato', sans-serif;
+    font-size: 1em;
+}
+
+#support-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.submit-button, .cancel-button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-button {
+    background-color: #4CAF50; /* Verde */
+    color: white;
+}
+.submit-button:hover {
+    background-color: #45a049;
+}
+
+.cancel-button {
+    background-color: #f44336; /* Vermelho */
+    color: white;
+    text-align: center;
+}
+.cancel-button:hover {
+    background-color: #d32f2f;
+}
+
+.form-note {
+    font-size: 0.9em;
+    color: #aaa;
+    margin-top: 15px;
+    font-style: italic;
+}
+
+/* --- Rodapé (Footer) --- */
+footer {
+    background-color: #111;
+    border-top: 3px solid #ffd700;
+    padding: 30px 0;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.footer-links a,
+.footer-links span {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    color: #ccc;
+    font-size: 1.1em;
+}
+
+.footer-links a:hover {
+    color: #ffd700;
+}
+
+/* --- Responsividade (Telas Pequenas) --- */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+    }
+    header nav ul {
+        margin-top: 15px;
+        justify-content: center;
+    }
+    header nav li {
+        margin: 0 10px;
+    }
+
+    .hero h2 {
+        font-size: 2.5em;
+    }
+
+    .connection-box {
+        width: 100%;
+    }
+
+    .support-grid {
+        grid-template-columns: 1fr; /* Coluna única */
+    }
+}
